@@ -52,10 +52,10 @@ modules:
       - printer-driver-brlaser
       - restic
       - samba-dcerpc
-		  - samba-ldb-ldap-modules
-			- samba-winbind-clients
-		  - samba-winbind-modules
-			- samba
+      - samba-ldb-ldap-modules
+      - samba-winbind-clients
+      - samba-winbind-modules
+      - samba
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
