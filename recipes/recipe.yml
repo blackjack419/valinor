@@ -55,7 +55,6 @@ modules:
     remove:
       - epson-inkjet-printer-escpr
       - epson-inkjet-printer-escpr2
-      - freeipa-client
       - krb5-workstation
       - printer-driver-brlaser
       - restic
