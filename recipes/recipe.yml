@@ -53,7 +53,6 @@ modules:
       - powerline-fonts
       
     remove:
-      - adcli
       - epson-inkjet-printer-escpr
       - epson-inkjet-printer-escpr2
       - freeipa-client
