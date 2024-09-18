@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: Valinor
+name: valinor
 # description will be included in the image's metadata
-description: Angelo Piazza's custom linux desktop container image
+description: A customized linux desktop based on Universal Blue Aurora (Fedora Kinoite)
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/aurora-nvidia
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: stable # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -17,7 +17,7 @@ modules:
 
   - type: rpm-ostree
     repos:
-      - https://packages.microsoft.com/yumrepos/vscode
+      - https://packages.microsoft.com/yumrepos/vscode/config.repo
     keys:
       - https://packages.microsoft.com/keys/microsoft.asc
     install:
@@ -25,6 +25,14 @@ modules:
       - android-tools
       - bcc
       - code
+      - cockpit-machines
+			- cockpit-networkmanager
+			- cockpit-ostree
+			- cockpit-pcp
+			- cockpit-podman
+			- cockpit-selinux
+			- cockpit-storaged
+			- cockpit-system
       - flatpak-builder
       - genisoimage
       - git-credential-libsecret
@@ -33,6 +41,7 @@ modules:
       - podman-tui
       - podmansh
       - sysprof
+      - tiptop
       - udica
       - ydotool
       # fonts
@@ -42,11 +51,12 @@ modules:
       - google-go-mono-fonts
       - mozilla-fira-mono-fonts
       - powerline-fonts
-      - ubuntu-family-fonts
       
     remove:
+      - adcli
       - epson-inkjet-printer-escpr
       - epson-inkjet-printer-escpr2
+      - freeipa-client
       - krb5-workstation
       - printer-driver-brlaser
       - restic
@@ -78,7 +88,6 @@ modules:
       remove:
        - org.kde.kontact
        - org.kde.haruna
-       - org.fkoehler.KTailctl
        - org.gnome.DejaDup
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
