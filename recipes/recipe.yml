@@ -26,13 +26,13 @@ modules:
       - bcc
       - code
       - cockpit-machines
-			- cockpit-networkmanager
-			- cockpit-ostree
-			- cockpit-pcp
-			- cockpit-podman
-			- cockpit-selinux
-			- cockpit-storaged
-			- cockpit-system
+      - cockpit-networkmanager
+      - cockpit-ostree
+      - cockpit-pcp
+      - cockpit-podman
+      - cockpit-selinux
+      - cockpit-storaged
+      - cockpit-system
       - flatpak-builder
       - genisoimage
       - git-credential-libsecret
