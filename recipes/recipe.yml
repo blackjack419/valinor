@@ -37,6 +37,7 @@ modules:
       - genisoimage
       - git-credential-libsecret
       - nicstat
+      - patch
       - podman-compose
       - podman-tui
       - podmansh
@@ -55,14 +56,21 @@ modules:
     remove:
       - epson-inkjet-printer-escpr
       - epson-inkjet-printer-escpr2
+      - kde-connect
+      - kde-connect-libs
+      - kdeconnected
       - krb5-workstation
       - printer-driver-brlaser
       - restic
+      - samba-common-tools
       - samba-dcerpc
       - samba-ldb-ldap-modules
+      - samba-winbind
       - samba-winbind-clients
       - samba-winbind-modules
+      - samba-usershares
       - samba
+      - toolbox
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
