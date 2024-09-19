@@ -58,7 +58,6 @@ modules:
       - epson-inkjet-printer-escpr2
       - kde-connect
       - kde-connect-libs
-      - kdeconnected
       - krb5-workstation
       - printer-driver-brlaser
       - restic
